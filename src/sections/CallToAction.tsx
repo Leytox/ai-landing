@@ -6,18 +6,9 @@ import underlineImage from "@/assets/images/underline.svg?url";
 import { Orbit } from "@/components/Orbit";
 import { Planet } from "@/components/Planet";
 import { useMousePosition } from "@/hooks/useMousePosition";
-import { useRef } from "react";
-import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+import { motion, useSpring, useTransform } from "framer-motion";
 export const CallToAction = () => {
   const { xProgress, yProgress } = useMousePosition();
-  const sectionRef = useRef(null);
-
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ["end start", "start end"],
-  });
-
-  const transformedY = useTransform(scrollYProgress, [0, 1], [200, -200]);
 
   const springX = useSpring(xProgress);
   const springY = useSpring(yProgress);
