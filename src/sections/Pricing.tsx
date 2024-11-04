@@ -75,8 +75,7 @@ export const Pricing = () => {
               {pricingTiers.map((tier) => (
                 <div
                   className={twMerge(
-                    "border border-[var(--color-border)] rounded-3xl px-6 py-12 max-w-sm mx-auto flex-1",
-                    tier.className,
+                    "border border-[var(--color-border)] rounded-3xl px-6 py-8 max-w-sm mx-auto flex-1",
                   )}
                   key={tier.title}
                 >

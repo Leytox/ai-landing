@@ -59,7 +59,7 @@ export const Testimonials = () => {
       clearInterval(interval);
       clearInterval(progressInterval);
     };
-  }, []);
+  }, [testimonialIndex]);
 
   return (
     <section id="testimonials">

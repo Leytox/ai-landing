@@ -43,7 +43,13 @@ export const Header = () => {
     <>
       <header className={"border-b border-[var(--color-border)] relative z-40"}>
         <div className={"container"}>
-          <div className="h-18 lg:h-20 flex items-center justify-between">
+          <div
+            className={twMerge(
+              "h-18 lg:h-20 flex items-center justify-between",
+              isMobileNavOpen &&
+                "fixed top-0 bg-gray-950 w-full justify-around",
+            )}
+          >
             <div className="flex gap-4 items-center">
               <Logo />
               <div className="font-extrabold text-2xl">sphereal.ai</div>
